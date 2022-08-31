@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.m2i</groupId>
 	<artifactId>appliSpringBiblio</artifactId>
@@ -19,28 +20,35 @@
 		<!-- windows/preferences/general/workspace / UTF8 avec eclipse coherent -->
 	</properties>
 	<dependencies>
-	
+
 		<dependency>
-	      	 <groupId>org.springdoc</groupId>
-	      	 <artifactId>springdoc-openapi-ui</artifactId>
-	      	 <!-- swagger open-source standardisé -->
-	      	 <version>1.6.1</version>
-    	</dependency>
-	
-	    <dependency>
-		    <groupId>com.h2database</groupId>
-		    <artifactId>h2</artifactId>
-		    <version>2.1.214</version>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<!-- swagger open-source standardisé -->
+			<version>1.6.1</version>
 		</dependency>
-		
+
 		<dependency>
-	    	<groupId>mysql</groupId>
-	    	<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.1.214</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 			<!-- <version>8.0.30</<version> -->
-	   </dependency>
-	   
-	  
-	
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -56,28 +64,19 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		
-		<!--
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		-->
-		
-		<!-- lombok sert à générer automatiquement les get/set et toString() 
-         pas de configuration supplémentaire absolument nécessaire dans intellij
-         pour que lombok fonctionne bien dans eclipse:
-           1) repérer le chemin menant à lombok.jar
-              $HOME\.m2\repository\org\projectlombok\lombok\1.18.24\lombok.jar
-           2) effectuer un double click sur lombok.jar 
-              (ou bien java -jar lombok.jar)
-           3) spécifier si besoin le chemin menant à eclipse
-           4) cliquer sur "Install" de façon à modifier eclipse.ini
-           5) arrêter et redémarrer eclipse
-           6) activer le menu Project/clean
-      -->
-		
+
+		<!-- <dependency> <groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId> 
+			<optional>true</optional> </dependency> -->
+
+		<!-- lombok sert à générer automatiquement les get/set et toString() pas 
+			de configuration supplémentaire absolument nécessaire dans intellij pour 
+			que lombok fonctionne bien dans eclipse: 1) repérer le chemin menant à lombok.jar 
+			$HOME\.m2\repository\org\projectlombok\lombok\1.18.24\lombok.jar 2) effectuer 
+			un double click sur lombok.jar (ou bien java -jar lombok.jar) 3) spécifier 
+			si besoin le chemin menant à eclipse 4) cliquer sur "Install" de façon à 
+			modifier eclipse.ini 5) arrêter et redémarrer eclipse 6) activer le menu 
+			Project/clean -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -92,7 +91,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>tp.appliSpring.AppliSpringApplication</mainClass>
-		        	<layout>ZIP</layout> <!-- build jar with all dependencies -->
+					<layout>ZIP</layout> <!-- build jar with all dependencies -->
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
