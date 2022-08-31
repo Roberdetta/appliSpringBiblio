@@ -12,7 +12,6 @@ public class Oeuvre {
 	
 	@Id
 	private String idPublication;
-	
 	private String titre;
 	private String auteur;
 	private String editeur;

@@ -22,5 +22,4 @@ public class AppliSpringApplication {
 		//http://localhost:8080/appliSpringBiblio/index.html
 		// et index.html sera trouvé dans src/main/resources/static
 	}
-
 }
