@@ -2,6 +2,8 @@ package tp.appliSpring.core.entity;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Embeddable
 public class Adresse {

@@ -26,6 +26,9 @@ public class Emprunt {
 	private Contentieux contentieux;
 	
 	@ManyToOne
-	private Abonne abonne;
+	private Abonne Emprunteur;
+	
+	@ManyToOne
+	private Exemplaire exemplaire;
 	
 }

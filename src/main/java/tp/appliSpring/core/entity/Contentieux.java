@@ -19,5 +19,5 @@ public class Contentieux {
 	private Boolean regle;
 	
 	@OneToOne (optional = false)
-	private Emprunt emprunteur;
+	private Emprunt emprunt;
 }
