@@ -3,15 +3,13 @@ package tp.appliSpring.core.entity;
 import java.time.LocalDate;
 
 import javax.persistence.DiscriminatorColumn;
-import javax.persistence.EmbeddedId;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -28,8 +26,7 @@ public abstract class Personne {
 	private String nom;
 	private String prenom;
 	
-	@EmbeddedId
-	@ManyToOne (optional = false)
+	@Embedded
 	private Adresse adresse;
 	private String email;
 	private String password;

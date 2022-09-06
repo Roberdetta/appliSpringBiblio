@@ -4,10 +4,13 @@ import java.sql.Timestamp;
 
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
+
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@DiscriminatorColumn(name="abonné")
+@DiscriminatorColumn(name="abonnés")
+@Getter @Setter
 public class Abonne extends Personne {
 	
 	private Timestamp dateDebutAbonnement;

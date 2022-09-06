@@ -25,10 +25,10 @@ public class Emprunt {
 	@OneToOne (optional = true)
 	private Contentieux contentieux;
 	
-	@ManyToOne
+	@ManyToOne (optional = false)
 	private Abonne Emprunteur;
 	
-	@ManyToOne
+	@ManyToOne (optional = false)
 	private Exemplaire exemplaire;
 	
 }

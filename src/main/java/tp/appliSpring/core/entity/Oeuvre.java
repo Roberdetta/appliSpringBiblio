@@ -2,6 +2,7 @@ package tp.appliSpring.core.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,10 +11,14 @@ import lombok.Setter;
 @Getter @Setter
 public class Oeuvre {
 	
-	@Id
-	private String idPublication;
 	private String titre;
 	private String auteur;
 	private String editeur;
+	
+	@Id
+	private String idPublication;
+	
+	@OneToMany
+	private Exemplaire exemplaire;
 	
 }
