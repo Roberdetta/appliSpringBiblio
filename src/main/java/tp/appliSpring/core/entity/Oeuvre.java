@@ -1,5 +1,7 @@
 package tp.appliSpring.core.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -18,7 +20,7 @@ public class Oeuvre {
 	@Id
 	private String idPublication;
 	
-	@OneToMany
-	private Exemplaire exemplaire;
+	@OneToMany (mappedBy = "oeuvre")
+	private List<Exemplaire> exemplaireList;
 	
 }

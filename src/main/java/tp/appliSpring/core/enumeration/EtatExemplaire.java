@@ -1,7 +1,8 @@
 package tp.appliSpring.core.enumeration;
 
-public class EtatExemplaire {
-	BON_ETAT
-	ABIME
-	HS
+public enum EtatExemplaire {
+	
+	BON_ETAT,
+	ABIME,
+	HS;
 }

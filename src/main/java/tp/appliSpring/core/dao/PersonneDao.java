@@ -3,7 +3,8 @@ package tp.appliSpring.core.dao;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import tp.appliSpring.core.entity.Abonne;
+import tp.appliSpring.core.entity.Personne;
 
-public interface EmployeDao extends JpaRepository<Abonne,String> {
+public interface PersonneDao extends JpaRepository<Personne,String> {
 
 }

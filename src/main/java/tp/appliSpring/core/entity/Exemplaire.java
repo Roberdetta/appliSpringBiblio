@@ -1,6 +1,7 @@
 package tp.appliSpring.core.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,10 +21,10 @@ public class Exemplaire {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long numero;
 	
-	@Enumerated
+	@Enumerated (EnumType.STRING)
 	private EtatExemplaire etatPhysique;
 	
-	@Enumerated
+	@Enumerated (EnumType.STRING)
 	private UsageExemplaire usage;
 	
 	@ManyToOne (optional = false)
