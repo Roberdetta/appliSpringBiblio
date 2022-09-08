@@ -10,7 +10,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter @Setter
+@Getter 
+@Setter
 public class Oeuvre {
 	
 	private String titre;
@@ -18,9 +19,9 @@ public class Oeuvre {
 	private String editeur;
 	
 	@Id
-	private String idPublication;
+	private String isbn;
 	
-	@OneToMany (mappedBy = "oeuvre")
-	private List<Exemplaire> exemplaireList;
+	@OneToMany(mappedBy = "oeuvre")
+	private List<Exemplaire> exemplaires;
 	
 }

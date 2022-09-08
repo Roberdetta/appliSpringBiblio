@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class ReInitDefaultDataSet {
 	
 	
-	@Autowired
+//	@Autowired
 //	private ServiceAbonne;
 
 	

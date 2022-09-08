@@ -9,8 +9,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@DiscriminatorColumn(name="abonnés")
-@Getter @Setter
+@DiscriminatorColumn(name="abonnes")
+@Getter
+@Setter
 public class Abonne extends Personne {
 	
 	private Timestamp dateDebutAbonnement;

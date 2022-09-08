@@ -13,7 +13,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Emprunt {
 	
 	@Id
@@ -22,13 +23,13 @@ public class Emprunt {
 	private Timestamp dateDebut;
 	private Timestamp dateFin;
 	
-	@OneToOne (optional = true)
+	@OneToOne(optional = true)
 	private Contentieux contentieux;
 	
-	@ManyToOne (optional = false)
+	@ManyToOne(optional = false)
 	private Abonne Emprunteur;
 	
-	@ManyToOne (optional = false)
+	@ManyToOne(optional = false)
 	private Exemplaire exemplaire;
 	
 }

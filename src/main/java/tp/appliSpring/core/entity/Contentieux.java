@@ -12,7 +12,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Contentieux {
 
 	@Id
@@ -22,6 +23,6 @@ public class Contentieux {
 	private String motif;
 	private Boolean regle;
 	
-	@OneToOne (optional = false)
+	@OneToOne(optional = false)
 	private Emprunt emprunt;
 }

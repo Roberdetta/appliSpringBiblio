@@ -17,7 +17,8 @@ import lombok.Setter;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="type_personne")
-@Getter @Setter
+@Getter
+@Setter
 public abstract class Personne {
 	
 	@Id

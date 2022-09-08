@@ -8,5 +8,5 @@ public enum UsageExemplaire {
 	RESERVE,
 	EN_RETARD,
 	RENDU,
-	PERDU_OU_HS;
+	PERDU_OU_HS
 }

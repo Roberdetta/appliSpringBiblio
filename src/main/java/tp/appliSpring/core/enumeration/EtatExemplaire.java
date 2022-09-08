@@ -4,5 +4,5 @@ public enum EtatExemplaire {
 	
 	BON_ETAT,
 	ABIME,
-	HS;
+	HS
 }

@@ -6,6 +6,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import lombok.Getter;
@@ -14,19 +15,21 @@ import tp.appliSpring.core.enumeration.EtatExemplaire;
 import tp.appliSpring.core.enumeration.UsageExemplaire;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class Exemplaire {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long numero;
 	
-	@Enumerated (EnumType.STRING)
-	private EtatExemplaire etatPhysique;
+//	@Enumerated(EnumType.STRING)
+//	private EtatExemplaire etatPhysique;
+//	
+//	@Enumerated(EnumType.STRING)
+//	private UsageExemplaire usage;
 	
-	@Enumerated (EnumType.STRING)
-	private UsageExemplaire usage;
-	
-	@ManyToOne (optional = false)
+	@ManyToOne(optional = false)
+//	@JoinColumn(name = "oeuvre_id")
 	private Oeuvre oeuvre;
 }

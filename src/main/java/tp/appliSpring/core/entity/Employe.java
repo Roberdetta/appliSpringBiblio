@@ -8,7 +8,8 @@ import lombok.Setter;
 
 @Entity
 @DiscriminatorColumn(name="employés")
-@Getter @Setter
+@Getter
+@Setter
 public class Employe extends Personne {
 
 	private String role;

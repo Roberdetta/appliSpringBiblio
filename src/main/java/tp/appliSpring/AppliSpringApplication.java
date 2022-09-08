@@ -15,7 +15,7 @@ public class AppliSpringApplication {
 		//SpringApplication.run(AppliSpringApplication.class, args);
 		SpringApplication app = new SpringApplication(AppliSpringApplication.class);
 		 //EN PHASE DE DEV SEULEMENT et .bat en prod
-		app.setAdditionalProfiles("embeddedDB","reInit","dev");
+		app.setAdditionalProfiles("remoteDB","reInit","dev");
 		ConfigurableApplicationContext context = app.run(args);
 		
 		System.out.println("http://localhost:8080/appliSpringBiblio");
