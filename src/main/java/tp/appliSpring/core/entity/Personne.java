@@ -11,7 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -19,6 +21,8 @@ import lombok.Setter;
 @DiscriminatorColumn(name="type_personne")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class Personne {
 	
 	@Id
@@ -33,7 +37,7 @@ public abstract class Personne {
 	private String password;
 	private LocalDate dateNaissance;
 	
-	public Personne getTypePersonne() {
-		return null;
-	}
+//	public Personne getTypePersonne() {
+//		return null;
+//	}
 }
