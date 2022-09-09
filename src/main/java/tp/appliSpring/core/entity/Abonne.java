@@ -1,6 +1,6 @@
 package tp.appliSpring.core.entity;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @DiscriminatorColumn(name="abonnes")
@@ -16,10 +17,11 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
 public class Abonne extends Personne {
 	
-	private Timestamp dateDebutAbonnement;
-	private Timestamp dateFinAbonnement;
+	private LocalDateTime dateDebutAbonnement;
+	private LocalDateTime dateFinAbonnement;
 	
 	public void changePassword() {
 		

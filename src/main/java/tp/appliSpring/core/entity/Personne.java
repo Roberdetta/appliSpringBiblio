@@ -15,14 +15,18 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name="type_personne")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+//@MappedSuperclass
+@SuperBuilder
 public abstract class Personne {
 	
 	@Id
